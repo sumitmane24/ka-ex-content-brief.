@@ -5,103 +5,70 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>KA-EX® — TikTok Shop Creator Brief 2025</title>
 <style>
-:root{color-scheme:light}
+:root{
+  --red:#e20a17;
+  --red-light:rgba(226,10,23,.08);
+  --red-mid:rgba(226,10,23,.15);
+  color-scheme:light;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
-  background:#ffffff;color:#0a0a0a;line-height:1.6;
-}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:#fff;color:#0a0a0a;line-height:1.6}
 
 /* ─── NAVBAR ─── */
 .navbar{
   position:sticky;top:0;z-index:300;
   background:#0a0a0a;
-  border-bottom:1px solid rgba(255,255,255,.08);
-  display:flex;align-items:center;padding:0 40px;
-  height:64px;
+  display:flex;align-items:center;padding:0 40px;height:64px;
 }
-.nav-logo{height:28px;object-fit:contain;flex-shrink:0;margin-right:40px}
-.nav-tabs{display:flex;flex:1;gap:2px;overflow-x:auto}
+.nav-logo{height:26px;object-fit:contain;flex-shrink:0;margin-right:40px}
+.nav-tabs{display:flex;flex:1;gap:0;overflow-x:auto}
 .nav-tab{
-  color:rgba(255,255,255,.45);padding:0 18px;height:64px;
+  color:rgba(255,255,255,.4);padding:0 20px;height:64px;
   display:flex;align-items:center;cursor:pointer;
-  font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
-  border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap;
-  user-select:none;
+  font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap;user-select:none;
 }
-.nav-tab:hover{color:rgba(255,255,255,.85);background:rgba(255,255,255,.04)}
-.nav-tab.active{color:#fff;border-bottom-color:#fff}
-.nav-tab.hl{color:#c8a84b}
-.nav-tab.hl.active{border-bottom-color:#c8a84b}
-.nav-right{margin-left:auto;font-size:10px;color:rgba(255,255,255,.3);letter-spacing:1px;white-space:nowrap}
+.nav-tab:hover{color:rgba(255,255,255,.8);background:rgba(255,255,255,.05)}
+.nav-tab.active{color:#fff;border-bottom-color:var(--red)}
+.nav-tab.hl{color:#ffb347}
+.nav-tab.hl.active{border-bottom-color:#ffb347}
+.nav-right{margin-left:auto;font-size:10px;color:rgba(255,255,255,.25);letter-spacing:1px;white-space:nowrap}
 
 /* ─── HERO ─── */
 .hero{
-  position:relative;min-height:540px;
+  position:relative;min-height:520px;
   display:grid;grid-template-columns:1fr 1fr;
   overflow:hidden;background:#fff;
 }
-.hero-left{
-  display:flex;flex-direction:column;justify-content:center;
-  padding:80px 60px;z-index:2;
-}
-.hero-eyebrow{
-  font-size:10px;font-weight:700;letter-spacing:3px;
-  color:rgba(0,0,0,.35);text-transform:uppercase;
-  margin-bottom:20px;
-}
-.hero h1{
-  font-size:52px;font-weight:800;line-height:1;
-  letter-spacing:-1px;margin-bottom:20px;
-  text-transform:uppercase;color:#0a0a0a;
-}
-.hero h1 em{font-style:normal;color:rgba(0,0,0,.25)}
-.hero-sub{
-  font-size:13px;color:rgba(0,0,0,.5);
-  max-width:380px;line-height:1.7;margin-bottom:36px;
-}
-.hero-stats{display:flex;gap:32px;margin-bottom:40px}
-.hstat-num{font-size:32px;font-weight:800;color:#0a0a0a;line-height:1}
-.hstat-sup{font-size:16px;font-weight:800}
-.hstat-lbl{font-size:9px;color:rgba(0,0,0,.4);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:72px 60px;z-index:2}
+.hero-eyebrow{font-size:10px;font-weight:700;letter-spacing:3px;color:rgba(0,0,0,.35);text-transform:uppercase;margin-bottom:16px}
+.hero h1{font-size:50px;font-weight:800;line-height:1.0;letter-spacing:-1px;margin-bottom:8px;text-transform:uppercase;color:#0a0a0a}
+.hero h1 span{color:var(--red)}
+.hero-tagline{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:16px}
+.hero-sub{font-size:13px;color:rgba(0,0,0,.5);max-width:380px;line-height:1.7;margin-bottom:32px}
+.hero-stats{display:flex;gap:28px;margin-bottom:36px}
+.hstat-num{font-size:34px;font-weight:800;color:var(--red);line-height:1}
+.hstat-sup{font-size:15px;font-weight:800}
+.hstat-lbl{font-size:9px;color:rgba(0,0,0,.4);letter-spacing:1px;text-transform:uppercase;margin-top:3px}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{
-  padding:12px 28px;font-size:11px;font-weight:700;
-  letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;
-  transition:all .2s;border:none;
-}
+.btn{padding:11px 26px;font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .2s;border:none}
 .btn-primary{background:#0a0a0a;color:#fff}
 .btn-primary:hover{background:#333}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:#c00812}
 .btn-ghost{background:transparent;color:#0a0a0a;border:1px solid rgba(0,0,0,.2)}
 .btn-ghost:hover{border-color:rgba(0,0,0,.5)}
-.hero-right{
-  position:relative;overflow:hidden;
-  background:#f5f5f5;
-}
-.hero-prod-img{
-  width:100%;height:100%;object-fit:cover;
-  object-position:center top;
-}
-.hero-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to right,#ffffff 0%,transparent 25%);
-}
+.hero-right{position:relative;overflow:hidden;background:#f2f2f2}
+.hero-prod-img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,#fff 0%,transparent 22%)}
 
 /* ─── STATS BAR ─── */
-.stats-bar{
-  display:grid;grid-template-columns:repeat(5,1fr);
-  border-top:1px solid rgba(0,0,0,.07);
-  border-bottom:1px solid rgba(0,0,0,.07);
-  background:#f8f8f8;
-}
-.sbar-item{
-  padding:22px 16px;text-align:center;
-  border-right:1px solid rgba(0,0,0,.06);
-}
+.stats-bar{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid rgba(0,0,0,.07);border-bottom:1px solid rgba(0,0,0,.07);background:#f8f8f8}
+.sbar-item{padding:18px 12px;text-align:center;border-right:1px solid rgba(0,0,0,.06)}
 .sbar-item:last-child{border-right:none}
-.sbar-num{font-size:26px;font-weight:800;color:#0a0a0a;line-height:1}
-.sbar-lbl{font-size:9px;color:rgba(0,0,0,.4);margin-top:5px;letter-spacing:.8px;text-transform:uppercase;line-height:1.4}
+.sbar-num{font-size:22px;font-weight:800;color:var(--red);line-height:1}
+.sbar-lbl{font-size:8.5px;color:rgba(0,0,0,.4);margin-top:4px;letter-spacing:.8px;text-transform:uppercase;line-height:1.4}
 
 /* ─── SECTIONS ─── */
 .section{display:none}
@@ -109,264 +76,122 @@ body{
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
 /* ─── SECTION HEADER ─── */
-.sec-header{
-  padding:28px 48px;
-  background:#f8f8f8;
-  border-bottom:1px solid rgba(0,0,0,.06);
-}
-.sec-label{font-size:9px;font-weight:700;letter-spacing:3px;color:rgba(0,0,0,.3);text-transform:uppercase;margin-bottom:6px}
-.sec-title{font-size:22px;font-weight:800;color:#0a0a0a;letter-spacing:-0.5px;text-transform:uppercase}
-.sec-desc{font-size:12px;color:rgba(0,0,0,.4);margin-top:6px}
+.sec-header{padding:26px 48px;background:#f8f8f8;border-bottom:1px solid rgba(0,0,0,.06)}
+.sec-label{font-size:9px;font-weight:700;letter-spacing:3px;color:rgba(0,0,0,.3);text-transform:uppercase;margin-bottom:5px}
+.sec-title{font-size:21px;font-weight:800;color:#0a0a0a;letter-spacing:-0.5px;text-transform:uppercase}
+.sec-desc{font-size:12px;color:rgba(0,0,0,.4);margin-top:5px}
 
-/* ─── CONTENT WRAPPER ─── */
-.content{padding:36px 48px;background:#fff}
+/* ─── CONTENT ─── */
+.content{padding:32px 48px;background:#fff}
 
-/* ─── GRID LAYOUTS ─── */
+/* ─── GRIDS ─── */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
 
 /* ─── CARDS ─── */
-.card{
-  background:#fff;
-  border:1px solid rgba(0,0,0,.08);
-  margin-bottom:24px;overflow:hidden;
-}
-.card-header{
-  padding:14px 20px;
-  background:#f8f8f8;
-  border-bottom:1px solid rgba(0,0,0,.06);
-  font-size:11px;font-weight:700;letter-spacing:1.5px;
-  text-transform:uppercase;color:#0a0a0a;
-  display:flex;align-items:center;gap:10px;
-}
+.card{background:#fff;border:1px solid rgba(0,0,0,.08);margin-bottom:22px;overflow:hidden}
+.card-header{padding:13px 20px;background:#f8f8f8;border-bottom:1px solid rgba(0,0,0,.06);font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;display:flex;align-items:center;gap:10px}
+.card-header .red{color:var(--red)}
 .card-body{padding:20px}
 
 /* ─── INFO ROWS ─── */
-.info-row{
-  display:flex;padding:10px 0;
-  border-bottom:1px solid rgba(0,0,0,.05);
-  gap:16px;
-}
+.info-row{display:flex;padding:9px 0;border-bottom:1px solid rgba(0,0,0,.05);gap:16px}
 .info-row:last-child{border-bottom:none}
-.info-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(0,0,0,.35);flex:0 0 160px}
+.info-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(0,0,0,.35);flex:0 0 150px}
 .info-value{font-size:12.5px;color:rgba(0,0,0,.75);flex:1}
-
-/* ─── PRODUCT SECTION ─── */
-.product-layout{display:grid;grid-template-columns:400px 1fr;gap:40px;margin-bottom:28px}
-.product-img-stack{display:flex;flex-direction:column;gap:12px}
-.product-img-main{
-  aspect-ratio:1/1.1;overflow:hidden;
-  background:#f5f5f5;border:1px solid rgba(0,0,0,.07);
-}
-.product-img-main img{width:100%;height:100%;object-fit:cover;object-position:center top}
-.product-img-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
-.product-img-thumb{
-  aspect-ratio:1/1;overflow:hidden;
-  background:#f5f5f5;border:1px solid rgba(0,0,0,.07);
-}
-.product-img-thumb img{width:100%;height:100%;object-fit:cover}
-.product-info{display:flex;flex-direction:column;gap:18px;padding-top:4px}
-
-/* ─── PRICE BOX ─── */
-.price-block{
-  border:1px solid rgba(0,0,0,.1);
-  padding:20px;background:#f9f9f9;
-}
-.price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
-.price-main{font-size:40px;font-weight:800;color:#0a0a0a;line-height:1}
-.price-pack{font-size:12px;color:rgba(0,0,0,.35);letter-spacing:1px;text-transform:uppercase}
-.price-original{font-size:13px;color:rgba(0,0,0,.3);text-decoration:line-through}
-.price-save{
-  display:inline-block;
-  background:#0a0a0a;color:#fff;
-  font-size:10px;font-weight:800;letter-spacing:1px;padding:3px 8px;
-  text-transform:uppercase;margin-top:8px;
-}
-.amz-badge-row{display:flex;align-items:center;gap:10px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(0,0,0,.06)}
-.amz-badge{background:#FF9900;color:#000;font-size:10px;font-weight:900;padding:4px 10px;letter-spacing:.5px}
-.amz-asin{font-size:10px;color:rgba(0,0,0,.35);letter-spacing:.5px}
 
 /* ─── BULLET LIST ─── */
 .bullet-list{list-style:none}
-.bullet-list li{
-  display:flex;gap:12px;padding:9px 0;
-  border-bottom:1px solid rgba(0,0,0,.05);
-  font-size:12.5px;color:rgba(0,0,0,.65);line-height:1.5;
-}
+.bullet-list li{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.05);font-size:12.5px;color:rgba(0,0,0,.65);line-height:1.5}
 .bullet-list li:last-child{border-bottom:none}
-.bullet-list li::before{
-  content:"—";color:rgba(0,0,0,.2);
-  flex-shrink:0;font-weight:700;
-}
+.bullet-list li::before{content:"—";color:rgba(0,0,0,.2);flex-shrink:0;font-weight:700}
 
 /* ─── HOOK LIST ─── */
-.hook-item{
-  display:flex;gap:16px;padding:16px 0;
-  border-bottom:1px solid rgba(0,0,0,.05);align-items:flex-start;
-}
+.hook-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(0,0,0,.05);align-items:flex-start}
 .hook-item:last-child{border-bottom:none}
-.hook-n{
-  font-size:11px;font-weight:800;color:rgba(0,0,0,.2);
-  flex-shrink:0;width:28px;padding-top:1px;letter-spacing:1px;
-}
-.hook-type{font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(0,0,0,.35);text-transform:uppercase;margin-bottom:4px}
+.hook-n{font-size:11px;font-weight:800;color:rgba(0,0,0,.2);flex-shrink:0;width:28px;padding-top:1px;letter-spacing:1px}
+.hook-type{font-size:9px;font-weight:700;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:4px}
 .hook-text{font-size:13px;color:rgba(0,0,0,.7);line-height:1.5}
 
 /* ─── SCENARIO TABLE ─── */
 .scen-table{width:100%;border-collapse:collapse;font-size:12px}
-.scen-table th{
-  background:#f5f5f5;color:rgba(0,0,0,.5);
-  padding:10px 14px;text-align:left;
-  border:1px solid rgba(0,0,0,.07);
-  font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;
-}
-.scen-table td{
-  padding:11px 14px;border:1px solid rgba(0,0,0,.06);
-  vertical-align:top;color:rgba(0,0,0,.65);line-height:1.5;
-}
+.scen-table th{background:#f5f5f5;color:rgba(0,0,0,.5);padding:10px 14px;text-align:left;border:1px solid rgba(0,0,0,.07);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+.scen-table td{padding:11px 14px;border:1px solid rgba(0,0,0,.06);vertical-align:top;color:rgba(0,0,0,.65);line-height:1.5}
 .scen-table tr:nth-child(odd) td{background:#fafafa}
 .scen-table tr:nth-child(even) td{background:#fff}
-.tag{
-  display:inline-block;padding:2px 8px;
-  font-size:9px;font-weight:700;letter-spacing:.5px;
-  border:1px solid rgba(0,0,0,.12);color:rgba(0,0,0,.5);
-  text-transform:uppercase;
-}
+.tag{display:inline-block;padding:2px 8px;font-size:9px;font-weight:700;letter-spacing:.5px;border:1px solid rgba(0,0,0,.12);color:rgba(0,0,0,.5);text-transform:uppercase}
 
 /* ─── CAPTION BOX ─── */
-.caption-box{
-  background:#f9f9f9;
-  border-left:2px solid rgba(0,0,0,.15);
-  padding:16px 18px;margin-bottom:12px;
-  font-size:12.5px;color:rgba(0,0,0,.6);
-  line-height:1.65;font-style:italic;
-}
-.caption-label{
-  font-size:9px;font-weight:700;letter-spacing:2px;
-  color:rgba(0,0,0,.35);text-transform:uppercase;
-  margin-bottom:8px;font-style:normal;
-}
+.caption-box{background:#f9f9f9;border-left:2px solid rgba(0,0,0,.15);padding:14px 18px;margin-bottom:12px;font-size:12.5px;color:rgba(0,0,0,.6);line-height:1.65;font-style:italic}
+.caption-label{font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(0,0,0,.35);text-transform:uppercase;margin-bottom:8px;font-style:normal}
 
 /* ─── PILLS ─── */
 .pill-group{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-.pill{
-  padding:5px 14px;border:1px solid rgba(0,0,0,.1);
-  font-size:10px;letter-spacing:.5px;color:rgba(0,0,0,.5);
-  background:#fafafa;
-}
+.pill{padding:4px 12px;border:1px solid rgba(0,0,0,.1);font-size:10px;letter-spacing:.5px;color:rgba(0,0,0,.5);background:#fafafa}
 .pill-hi{border-color:rgba(0,0,0,.25);color:rgba(0,0,0,.75);background:#f0f0f0}
+.pill-red{border-color:rgba(226,10,23,.3);color:var(--red);background:var(--red-light)}
 
-/* ─── DO'S & DON'TS ─── */
-.dd-warning{
-  display:flex;align-items:flex-start;gap:14px;
-  background:#fffbf0;border:1px solid rgba(200,168,75,.35);
-  border-left:3px solid #c8a84b;
-  padding:16px 20px;margin-bottom:24px;
-  font-size:12.5px;color:rgba(0,0,0,.65);line-height:1.6;
-}
-.dd-warning-icon{font-size:20px;flex-shrink:0;margin-top:1px}
-.dd-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:24px}
-.dd-col-head{
-  padding:22px 24px;
-  display:flex;align-items:center;gap:12px;
-  font-size:16px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
-}
-.dd-col-do .dd-col-head{background:#e8f7ec;color:#16a34a;border-bottom:1px solid rgba(22,163,74,.15)}
-.dd-col-dont .dd-col-head{background:#fde8e8;color:#dc2626;border-bottom:1px solid rgba(220,38,38,.15)}
-.dd-icon{
-  width:32px;height:32px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:16px;font-weight:900;flex-shrink:0;
-}
-.dd-col-do .dd-icon{background:rgba(22,163,74,.12);color:#16a34a;border:1px solid rgba(22,163,74,.2)}
-.dd-col-dont .dd-icon{background:rgba(220,38,38,.12);color:#dc2626;border:1px solid rgba(220,38,38,.2)}
-.dd-item{
-  display:flex;gap:12px;align-items:flex-start;
-  padding:13px 20px;
-  border-bottom:1px solid rgba(0,0,0,.04);
-  font-size:12.5px;color:rgba(0,0,0,.65);line-height:1.5;
-}
-.dd-item:last-child{border-bottom:none}
-.dd-col-do{background:#f4fcf5}
-.dd-col-dont{background:#fdf4f4}
-.dd-col-do .dd-item:nth-child(even){background:rgba(22,163,74,.03)}
-.dd-col-dont .dd-item:nth-child(even){background:rgba(220,38,38,.03)}
-.dd-dot{
-  width:18px;height:18px;border-radius:50%;flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-  font-size:10px;font-weight:900;margin-top:2px;
-}
-.dd-dot-do{background:rgba(22,163,74,.12);color:#16a34a;border:1px solid rgba(22,163,74,.25)}
-.dd-dot-dont{background:rgba(220,38,38,.12);color:#dc2626;border:1px solid rgba(220,38,38,.25)}
-.fda-box{
-  background:#f9f9f9;
-  border:1px solid rgba(0,0,0,.07);
-  border-left:2px solid rgba(0,0,0,.15);
-  padding:16px 20px;
-  font-size:11.5px;color:rgba(0,0,0,.45);line-height:1.65;
-}
-.fda-title{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(0,0,0,.35);margin-bottom:8px}
+/* ─── PAIN POINTS ─── */
+.pain-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:16px}
+.pain-item{text-align:center;padding:14px 10px;background:#fafafa;border:1px solid rgba(0,0,0,.06)}
+.pain-icon{font-size:24px;margin-bottom:6px}
+.pain-label{font-size:10px;font-weight:700;color:rgba(0,0,0,.65);letter-spacing:.5px;line-height:1.3}
 
-/* ─── ATHLETE STRIP ─── */
-.athlete-strip{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:24px}
-.athlete-card{
-  background:#fafafa;padding:24px;
-  display:flex;gap:18px;align-items:flex-start;
-  border:1px solid rgba(0,0,0,.05);
+/* ─── BIG STAT CALLOUT ─── */
+.big-stat{
+  background:var(--red);color:#fff;
+  padding:28px 32px;
+  display:flex;align-items:center;gap:24px;
+  margin-bottom:22px;
 }
-.athlete-img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;filter:grayscale(15%)}
-.athlete-name{font-size:13px;font-weight:700;color:#0a0a0a;margin-bottom:3px}
-.athlete-role{font-size:10px;color:rgba(0,0,0,.4);letter-spacing:.5px;margin-bottom:10px}
-.athlete-quote{font-size:11.5px;color:rgba(0,0,0,.55);line-height:1.55;font-style:italic}
+.big-stat-num{font-size:64px;font-weight:800;line-height:1;letter-spacing:-2px;flex-shrink:0}
+.big-stat-text{}
+.big-stat-title{font-size:14px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.big-stat-desc{font-size:11.5px;color:rgba(255,255,255,.75);line-height:1.5}
 
-/* ─── DELIVERABLES ─── */
-.deliv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.deliv-item{
-  display:flex;gap:14px;padding:14px 0;
-  border-bottom:1px solid rgba(0,0,0,.05);
-}
-.deliv-item:last-child{border-bottom:none}
-.deliv-check{
-  width:20px;height:20px;flex-shrink:0;
-  border:1px solid rgba(0,0,0,.2);
-  display:flex;align-items:center;justify-content:center;
-  font-size:10px;color:rgba(0,0,0,.5);margin-top:2px;
-  background:#f5f5f5;
-}
-.deliv-title{font-size:13px;font-weight:700;color:#0a0a0a;margin-bottom:3px}
-.deliv-desc{font-size:11px;color:rgba(0,0,0,.45);line-height:1.45}
+/* ─── SWISS ARMY KNIFE GRID ─── */
+.sak-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.sak-item{background:#f8f8f8;padding:18px;border:1px solid rgba(0,0,0,.06)}
+.sak-title{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#0a0a0a;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.sak-dot{width:8px;height:8px;border-radius:50%;background:var(--red);flex-shrink:0}
+.sak-desc{font-size:11px;color:rgba(0,0,0,.5);line-height:1.5}
+.sak-active{font-size:9px;font-weight:700;color:var(--red);letter-spacing:.5px;margin-top:5px}
 
-/* ─── CONTACT ─── */
-.contact-card{
-  background:#f8f8f8;border:1px solid rgba(0,0,0,.07);
-  padding:24px;display:flex;align-items:center;gap:20px;margin-top:24px;
-}
-.contact-avatar{
-  width:48px;height:48px;border-radius:50%;
-  background:#e5e5e5;border:1px solid rgba(0,0,0,.1);
-  display:flex;align-items:center;justify-content:center;
-  font-size:18px;flex-shrink:0;
-}
-.contact-name{font-size:14px;font-weight:700;color:#0a0a0a;margin-bottom:3px}
-.contact-role{font-size:10px;color:rgba(0,0,0,.4);letter-spacing:.5px;margin-bottom:10px}
-.contact-link{
-  font-size:10px;font-weight:600;letter-spacing:1px;
-  color:rgba(0,0,0,.55);border:1px solid rgba(0,0,0,.15);
-  padding:5px 12px;text-decoration:none;margin-right:8px;
-  display:inline-block;transition:all .2s;background:#fff;
-}
-.contact-link:hover{color:#0a0a0a;border-color:rgba(0,0,0,.4)}
+/* ─── PRODUCT ─── */
+.product-layout{display:grid;grid-template-columns:380px 1fr;gap:36px;margin-bottom:24px}
+.product-img-stack{display:flex;flex-direction:column;gap:10px}
+.product-img-main{aspect-ratio:1/1.1;overflow:hidden;background:#f5f5f5;border:1px solid rgba(0,0,0,.07)}
+.product-img-main img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.product-img-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.product-img-thumb{aspect-ratio:1/1;overflow:hidden;background:#f5f5f5;border:1px solid rgba(0,0,0,.07)}
+.product-img-thumb img{width:100%;height:100%;object-fit:cover}
+.product-info{display:flex;flex-direction:column;gap:16px;padding-top:4px}
 
-/* ─── TESTED BY ─── */
-.tested-row{
-  display:flex;align-items:center;gap:16px;
-  border-top:1px solid rgba(0,0,0,.06);
-  padding-top:16px;margin-top:16px;
-}
-.tested-img{height:36px;object-fit:contain;opacity:.7}
-.tested-txt{font-size:10px;color:rgba(0,0,0,.35);letter-spacing:.5px;text-transform:uppercase}
+/* ─── PRICE ─── */
+.price-block{border:1px solid rgba(0,0,0,.1);padding:20px;background:#f9f9f9}
+.price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.price-main{font-size:38px;font-weight:800;color:#0a0a0a;line-height:1}
+.price-pack{font-size:12px;color:rgba(0,0,0,.35);letter-spacing:1px;text-transform:uppercase}
+.price-original{font-size:13px;color:rgba(0,0,0,.3);text-decoration:line-through}
+.price-save{display:inline-block;background:var(--red);color:#fff;font-size:10px;font-weight:800;letter-spacing:1px;padding:3px 8px;text-transform:uppercase;margin-top:8px}
+.amz-badge-row{display:flex;align-items:center;gap:10px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(0,0,0,.06)}
+.amz-badge{background:#FF9900;color:#000;font-size:10px;font-weight:900;padding:4px 10px;letter-spacing:.5px}
+.amz-asin{font-size:10px;color:rgba(0,0,0,.35);letter-spacing:.5px}
 
-/* ─── RTM STEPS ─── */
+/* ─── FORMATS ─── */
+.format-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:16px}
+.format-item{background:#f8f8f8;border:1px solid rgba(0,0,0,.07);padding:16px;text-align:center}
+.format-icon{font-size:28px;margin-bottom:8px}
+.format-name{font-size:12px;font-weight:800;color:#0a0a0a;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px}
+.format-desc{font-size:11px;color:rgba(0,0,0,.45);line-height:1.4}
+
+/* ─── CLINICAL BAR ─── */
+.clin-bar-wrap{margin:12px 0 4px}
+.clin-bar-label{font-size:10px;font-weight:700;color:rgba(0,0,0,.5);letter-spacing:.5px;margin-bottom:4px;display:flex;justify-content:space-between}
+.clin-bar-track{height:6px;background:#eee;position:relative;overflow:hidden}
+.clin-bar-fill{height:100%;background:var(--red);transition:width .6s ease}
+
+/* ─── RTM ─── */
 .rtm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:0}
 .rtm-item{background:#f5f5f5;overflow:hidden;border:1px solid rgba(0,0,0,.05)}
 .rtm-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
@@ -375,29 +200,130 @@ body{
 .rtm-label{font-size:12px;font-weight:700;color:#0a0a0a;margin-bottom:3px;text-transform:uppercase;letter-spacing:1px}
 .rtm-desc{font-size:11px;color:rgba(0,0,0,.45)}
 
-/* ─── FOOTER ─── */
-.brief-footer{
-  border-top:1px solid rgba(0,0,0,.07);
-  padding:24px 48px;background:#0a0a0a;
-  display:flex;align-items:center;justify-content:space-between;
+/* ─── ENDORSEMENTS ─── */
+.endorse-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.endorse-card{background:#fafafa;padding:20px;display:flex;gap:16px;align-items:flex-start;border:1px solid rgba(0,0,0,.05)}
+.endorse-img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.endorse-name{font-size:12.5px;font-weight:800;color:#0a0a0a;margin-bottom:2px}
+.endorse-role{font-size:9.5px;color:var(--red);letter-spacing:.3px;margin-bottom:8px;font-weight:600}
+.endorse-quote{font-size:11px;color:rgba(0,0,0,.55);line-height:1.55;font-style:italic}
+
+/* ─── FOUNDER ─── */
+.founder-card{display:flex;gap:32px;align-items:flex-start;padding:28px;background:#f8f8f8;border:1px solid rgba(0,0,0,.07);margin-bottom:22px}
+.founder-img{width:80px;height:80px;border-radius:50%;background:#e0e0e0;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:32px}
+.founder-name{font-size:16px;font-weight:800;color:#0a0a0a;margin-bottom:2px}
+.founder-role{font-size:10px;color:var(--red);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;font-weight:700}
+.founder-text{font-size:12.5px;color:rgba(0,0,0,.6);line-height:1.65}
+
+/* ─── CERT BADGES ─── */
+.cert-strip{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.cert-badge{padding:5px 12px;border:1px solid rgba(0,0,0,.12);font-size:9.5px;font-weight:700;letter-spacing:.5px;color:rgba(0,0,0,.5);background:#f8f8f8;text-transform:uppercase}
+.cert-badge.good{border-color:rgba(22,163,74,.3);color:#16a34a;background:rgba(22,163,74,.04)}
+
+/* ─── NO ASHWAGANDHA ─── */
+.no-ash{
+  background:#0a0a0a;color:#fff;
+  padding:28px 32px;margin-bottom:22px;
+  display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
 }
-.footer-logo{height:22px;object-fit:contain;opacity:.7}
-.footer-copy{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.5px}
+.no-ash-left{}
+.no-ash-title{font-size:20px;font-weight:800;letter-spacing:-0.5px;text-transform:uppercase;margin-bottom:6px}
+.no-ash-title span{color:var(--red)}
+.no-ash-desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.6;max-width:520px}
+.no-ash-right{display:flex;flex-direction:column;gap:8px;min-width:200px}
+.no-ash-point{font-size:11px;color:rgba(255,255,255,.8);line-height:1.4;display:flex;gap:10px;align-items:flex-start}
+.no-ash-tag{font-size:9px;font-weight:800;color:var(--red);letter-spacing:1px;text-transform:uppercase;flex-shrink:0;margin-top:2px}
+
+/* ─── DO's & DON'TS ─── */
+.dd-warning{display:flex;align-items:flex-start;gap:14px;background:#fffbf0;border:1px solid rgba(200,168,75,.35);border-left:3px solid #c8a84b;padding:16px 20px;margin-bottom:22px;font-size:12.5px;color:rgba(0,0,0,.65);line-height:1.6}
+.dd-warning-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+.dd-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:22px}
+.dd-col-head{padding:20px 24px;display:flex;align-items:center;gap:12px;font-size:15px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.dd-col-do .dd-col-head{background:#e8f7ec;color:#16a34a;border-bottom:1px solid rgba(22,163,74,.15)}
+.dd-col-dont .dd-col-head{background:#fde8e8;color:#dc2626;border-bottom:1px solid rgba(220,38,38,.15)}
+.dd-icon{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;flex-shrink:0}
+.dd-col-do .dd-icon{background:rgba(22,163,74,.12);color:#16a34a;border:1px solid rgba(22,163,74,.2)}
+.dd-col-dont .dd-icon{background:rgba(220,38,38,.12);color:#dc2626;border:1px solid rgba(220,38,38,.2)}
+.dd-item{display:flex;gap:12px;align-items:flex-start;padding:12px 20px;border-bottom:1px solid rgba(0,0,0,.04);font-size:12.5px;color:rgba(0,0,0,.65);line-height:1.5}
+.dd-item:last-child{border-bottom:none}
+.dd-col-do{background:#f4fcf5}
+.dd-col-dont{background:#fdf4f4}
+.dd-dot{width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;margin-top:2px}
+.dd-dot-do{background:rgba(22,163,74,.12);color:#16a34a;border:1px solid rgba(22,163,74,.25)}
+.dd-dot-dont{background:rgba(220,38,38,.12);color:#dc2626;border:1px solid rgba(220,38,38,.25)}
+.fda-box{background:#f9f9f9;border:1px solid rgba(0,0,0,.07);border-left:2px solid rgba(0,0,0,.15);padding:16px 20px;font-size:11.5px;color:rgba(0,0,0,.45);line-height:1.65}
+.fda-title{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(0,0,0,.35);margin-bottom:8px}
+
+/* ─── SCRIPT CARDS ─── */
+.script-card{margin-bottom:28px;border:1px solid rgba(0,0,0,.09);overflow:hidden}
+.script-card-header{background:#0a0a0a;color:#fff;padding:14px 22px;display:flex;align-items:center;justify-content:space-between}
+.script-card-title{font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.script-card-meta{display:flex;gap:16px}
+.script-meta-pill{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.15);padding:3px 8px}
+.script-meta-pill.red{background:var(--red);color:#fff;border-color:var(--red)}
+.hook-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-bottom:0}
+.hook-card{background:#f9f9f9;padding:16px 18px;border-right:1px solid rgba(0,0,0,.06)}
+.hook-card:last-child{border-right:none}
+.hook-num{font-size:9px;font-weight:800;color:var(--red);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px}
+.hook-quote{font-size:12.5px;color:#0a0a0a;line-height:1.55;font-style:italic}
+.creator-brief-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(0,0,0,.06)}
+.cb-item{padding:14px 18px;border-right:1px solid rgba(0,0,0,.06);border-bottom:1px solid rgba(0,0,0,.06)}
+.cb-item:last-child{border-right:none}
+.cb-label{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:rgba(0,0,0,.3);margin-bottom:5px}
+.cb-value{font-size:11.5px;color:rgba(0,0,0,.65);line-height:1.45}
+.cta-strip{display:flex;gap:2px;border-top:1px solid rgba(0,0,0,.06)}
+.cta-item{flex:1;padding:12px 18px;background:#fff;border-right:1px solid rgba(0,0,0,.06)}
+.cta-item:last-child{border-right:none}
+.cta-label{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(0,0,0,.3);margin-bottom:4px}
+.cta-text{font-size:12px;font-weight:700;color:var(--red)}
+.round1-bar{background:#f8f8f8;border:1px solid rgba(0,0,0,.08);padding:16px 22px;margin-bottom:22px;display:flex;gap:28px;align-items:flex-start}
+.round1-col{}
+.round1-title{font-size:9px;font-weight:800;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:8px}
+.round1-items{display:flex;flex-direction:column;gap:5px}
+.round1-item{font-size:11.5px;color:rgba(0,0,0,.6);display:flex;gap:8px;align-items:flex-start;line-height:1.4}
+.round1-item::before{content:"→";color:var(--red);font-weight:700;flex-shrink:0}
+/* ─── QUOTE BLOCK ─── */
+.quote-block{background:var(--red);padding:24px 28px;margin-bottom:22px}
+.quote-text{font-size:18px;font-weight:800;color:#fff;line-height:1.3;margin-bottom:8px}
+.quote-source{font-size:10px;color:rgba(255,255,255,.6);letter-spacing:.5px;text-transform:uppercase}
+
+/* ─── DELIVERABLES ─── */
+.deliv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.deliv-item{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid rgba(0,0,0,.05)}
+.deliv-item:last-child{border-bottom:none}
+.deliv-check{width:20px;height:20px;flex-shrink:0;border:1px solid rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,.5);margin-top:2px;background:#f5f5f5}
+.deliv-title{font-size:13px;font-weight:700;color:#0a0a0a;margin-bottom:3px}
+.deliv-desc{font-size:11px;color:rgba(0,0,0,.45);line-height:1.45}
+
+/* ─── CONTACT ─── */
+.contact-card{background:#f8f8f8;border:1px solid rgba(0,0,0,.07);padding:24px;display:flex;align-items:center;gap:20px;margin-top:22px}
+.contact-avatar{width:48px;height:48px;border-radius:50%;background:#e5e5e5;border:1px solid rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.contact-name{font-size:14px;font-weight:700;color:#0a0a0a;margin-bottom:3px}
+.contact-role{font-size:10px;color:rgba(0,0,0,.4);letter-spacing:.5px;margin-bottom:10px}
+.contact-link{font-size:10px;font-weight:600;letter-spacing:1px;color:rgba(0,0,0,.55);border:1px solid rgba(0,0,0,.15);padding:5px 12px;text-decoration:none;margin-right:8px;display:inline-block;transition:all .2s;background:#fff}
+.contact-link:hover{color:#0a0a0a;border-color:rgba(0,0,0,.4)}
+
+/* ─── TESTED / CERT ─── */
+.tested-row{display:flex;align-items:center;gap:16px;border-top:1px solid rgba(0,0,0,.06);padding-top:14px;margin-top:14px}
+.tested-img{height:34px;object-fit:contain;opacity:.65}
+.tested-txt{font-size:10px;color:rgba(0,0,0,.35);letter-spacing:.5px;text-transform:uppercase}
+
+/* ─── FOOTER ─── */
+.brief-footer{border-top:1px solid rgba(0,0,0,.07);padding:22px 48px;background:#0a0a0a;display:flex;align-items:center;justify-content:space-between}
+.footer-logo{height:20px;object-fit:contain;opacity:.6}
+.footer-copy{font-size:10px;color:rgba(255,255,255,.25);letter-spacing:.5px}
 
 /* ─── RESPONSIVE ─── */
 @media(max-width:900px){
-  .hero{grid-template-columns:1fr}
-  .hero-right{display:none}
-  .hero-left{padding:48px 28px}
-  .hero h1{font-size:36px}
-  .product-layout,.grid-2,.dd-grid,.deliv-grid,.athlete-strip{grid-template-columns:1fr}
-  .content{padding:24px 20px}
-  .sec-header{padding:20px}
+  .hero{grid-template-columns:1fr}.hero-right{display:none}
+  .hero-left{padding:48px 24px}.hero h1{font-size:36px}
+  .product-layout,.grid-2,.dd-grid,.deliv-grid,.endorse-grid{grid-template-columns:1fr}
+  .content{padding:22px 18px}.sec-header{padding:18px 20px}
   .stats-bar{grid-template-columns:repeat(3,1fr)}
-  .nav-tabs{overflow-x:auto}
-  .brief-footer{padding:20px;flex-direction:column;gap:10px;text-align:center}
-  .navbar{padding:0 16px}
-  .rtm-grid{grid-template-columns:1fr}
+  .nav-tabs{overflow-x:auto}.navbar{padding:0 16px}
+  .brief-footer{padding:18px;flex-direction:column;gap:8px;text-align:center}
+  .rtm-grid{grid-template-columns:1fr}.sak-grid{grid-template-columns:1fr 1fr}
+  .no-ash{grid-template-columns:1fr}.big-stat{flex-direction:column;gap:12px}
 }
 </style>
 </head>
@@ -406,11 +332,11 @@ body{
 <!-- NAVBAR -->
 <nav class="navbar">
   <img class="nav-logo" src="https://ka-ex.com/cdn/shop/files/logo_white.png?v=1773743085" alt="KA-EX">
-  <div class="nav-tabs" id="navTabs">
+  <div class="nav-tabs">
     <div class="nav-tab active" data-target="overview" onclick="show('overview',this)">Overview</div>
     <div class="nav-tab" data-target="product" onclick="show('product',this)">Product</div>
     <div class="nav-tab" data-target="strategy" onclick="show('strategy',this)">Content Strategy</div>
-    <div class="nav-tab hl" data-target="dosdonts" onclick="show('dosdonts',this)">✅ Do's &amp; Don'ts 🚫</div>
+    <div class="nav-tab hl" data-target="dosdonts" onclick="show('dosdonts',this)">✅ Do's &amp; Don'ts</div>
     <div class="nav-tab" data-target="deliverables" onclick="show('deliverables',this)">Deliverables</div>
   </div>
   <div class="nav-right">TIKTOK SHOP · 2025</div>
@@ -420,34 +346,38 @@ body{
 <section class="hero">
   <div class="hero-left">
     <div class="hero-eyebrow">TikTok Shop Creator Brief · 2025</div>
-    <h1>CORTISOL<br>STRESS<br><em>REDUCER+</em></h1>
-    <p class="hero-sub">Ka-Ex PWD 3-Pack — Your guide to authentic, compliant, high-converting TikTok content. 5 years of science. Clinically proven. Ready to share.</p>
+    <h1>CORTISOL<br>STRESS<br><span>REDUCER</span></h1>
+    <div class="hero-tagline">It's Science, Baby!</div>
+    <p class="hero-sub">The World's First Fast-Acting Cortisol Stress Reducer. Swiss-formulated, clinically proven, trusted by 1,000s of pro athletes. Works in 48 hours.</p>
     <div class="hero-stats">
-      <div class="hstat"><div class="hstat-num">36<span class="hstat-sup">%</span></div><div class="hstat-lbl">Cortisol Reduction</div></div>
-      <div class="hstat"><div class="hstat-num">+16<span class="hstat-sup">%</span></div><div class="hstat-lbl">REM Sleep</div></div>
-      <div class="hstat"><div class="hstat-num">+10<span class="hstat-sup">%</span></div><div class="hstat-lbl">HRV</div></div>
+      <div class="hstat"><div class="hstat-num">-36<span class="hstat-sup">%</span></div><div class="hstat-lbl">Cortisol Stress</div></div>
+      <div class="hstat"><div class="hstat-num">+15<span class="hstat-sup">%</span></div><div class="hstat-lbl">REM Sleep</div></div>
+      <div class="hstat"><div class="hstat-num">+10<span class="hstat-sup">%</span></div><div class="hstat-lbl">HRV Pattern</div></div>
     </div>
     <div class="hero-btns">
-      <button class="btn btn-primary" onclick="show('dosdonts',document.querySelector('[data-target=dosdonts]'))">Do's &amp; Don'ts</button>
+      <button class="btn btn-red" onclick="show('dosdonts',document.querySelector('[data-target=dosdonts]'))">Do's &amp; Don'ts</button>
       <button class="btn btn-ghost" onclick="show('strategy',document.querySelector('[data-target=strategy]'))">Content Strategy →</button>
     </div>
   </div>
   <div class="hero-right">
-    <img class="hero-prod-img" src="https://ka-ex.com/cdn/shop/files/2604_KA-EX_PWD_Cortisol-Stress-Reducer_24-pack_left_US.png?v=1774221262" alt="KA-EX Product">
+    <img class="hero-prod-img" src="https://ka-ex.com/cdn/shop/files/2604_KA-EX_PWD_Cortisol-Stress-Reducer_24-pack_left_US.png?v=1774221262" alt="KA-EX CSR 3-Pack">
     <div class="hero-overlay"></div>
   </div>
 </section>
 
 <!-- STATS BAR -->
 <div class="stats-bar">
-  <div class="sbar-item"><div class="sbar-num">36%</div><div class="sbar-lbl">Cortisol<br>Reduction</div></div>
-  <div class="sbar-item"><div class="sbar-num">+16%</div><div class="sbar-lbl">REM Sleep<br>Improvement</div></div>
-  <div class="sbar-item"><div class="sbar-num">+10%</div><div class="sbar-lbl">HRV<br>Improvement</div></div>
-  <div class="sbar-item"><div class="sbar-num">+9%</div><div class="sbar-lbl">Energy Level<br>Increase</div></div>
-  <div class="sbar-item"><div class="sbar-num">+8%</div><div class="sbar-lbl">Mood Score<br>Improvement</div></div>
+  <div class="sbar-item"><div class="sbar-num">-36%</div><div class="sbar-lbl">Cortisol<br>Stress</div></div>
+  <div class="sbar-item"><div class="sbar-num">+15%</div><div class="sbar-lbl">REM Sleep<br>Duration</div></div>
+  <div class="sbar-item"><div class="sbar-num">-10%</div><div class="sbar-lbl">Avg. Stress<br>(HRV)</div></div>
+  <div class="sbar-item"><div class="sbar-num">+9%</div><div class="sbar-lbl">Daily<br>Energy</div></div>
+  <div class="sbar-item"><div class="sbar-num">-8%</div><div class="sbar-lbl">Mood<br>Disturbances</div></div>
+  <div class="sbar-item"><div class="sbar-num">-4%</div><div class="sbar-lbl">Resting<br>Heart Rate</div></div>
 </div>
 
-<!-- ── OVERVIEW ── -->
+<!-- ══════════════════════════════════════════════ -->
+<!-- TAB: OVERVIEW -->
+<!-- ══════════════════════════════════════════════ -->
 <div class="section active" id="sec-overview">
   <div class="sec-header">
     <div class="sec-label">Section 01</div>
@@ -455,6 +385,16 @@ body{
     <div class="sec-desc">Everything you need to know before creating content</div>
   </div>
   <div class="content">
+
+    <!-- Pain point headline -->
+    <div class="big-stat">
+      <div class="big-stat-num">50%</div>
+      <div class="big-stat-text">
+        <div class="big-stat-title">of high-intensity athletes experience abnormal cortisol</div>
+        <div class="big-stat-desc">Potentially resulting in non-functional overreaching or, in severe cases, overtraining. High cortisol leads to stagnated performance, sleep disturbances, low testosterone, belly fat, weak immune system, and increased risk of injury.</div>
+      </div>
+    </div>
+
     <div class="grid-2">
       <div>
         <div class="card">
@@ -465,76 +405,107 @@ body{
             <div class="info-row"><div class="info-label">Commission</div><div class="info-value">Up to 10% per sale</div></div>
             <div class="info-row"><div class="info-label">Content Type</div><div class="info-value">TikTok Videos 15–60 sec · Stitch · Duet</div></div>
             <div class="info-row"><div class="info-label">ASIN</div><div class="info-value" style="font-family:monospace">B0BMXK62BD</div></div>
+            <div class="info-row"><div class="info-label">Patent</div><div class="info-value">CH712761 — Globally Patented Formula</div></div>
             <div class="tested-row">
-              <img class="tested-img" src="https://ka-ex.com/cdn/shop/files/testedBy.png?v=1773742393" alt="Tested">
-              <span class="tested-txt">Informed Sport Certified · NSF · Vegan · Gluten-Free</span>
+              <img class="tested-img" src="https://ka-ex.com/cdn/shop/files/testedBy.png?v=1773742393" alt="Informed Sport">
+              <span class="tested-txt">Informed Sport Certified · Vegan · Caffeine-Free · Gluten-Free · Lactose-Free</span>
             </div>
           </div>
         </div>
+
         <div class="card">
-          <div class="card-header">Key Selling Points</div>
+          <div class="card-header">High Cortisol Pain Points</div>
           <div class="card-body">
-            <div class="info-row"><div class="info-label">Unique Position</div><div class="info-value">World's first clinically-proven cortisol reducer — works in 48 hours</div></div>
-            <div class="info-row"><div class="info-label">Backed By</div><div class="info-value">3 clinical studies, 5 years of Swiss research</div></div>
-            <div class="info-row"><div class="info-label">Athletes</div><div class="info-value">PSG · Tudor Pro Cycling · Swiss National Soccer · F1 · 1000+ pros</div></div>
-            <div class="info-row"><div class="info-label">Value</div><div class="info-value">3-Pack · ~$16.66/unit · best value for 30-day routine</div></div>
+            <div class="pain-grid">
+              <div class="pain-item"><div class="pain-icon">📉</div><div class="pain-label">Stagnated Performance</div></div>
+              <div class="pain-item"><div class="pain-icon">😴</div><div class="pain-label">Sleep Disturbances</div></div>
+              <div class="pain-item"><div class="pain-icon">⬇️</div><div class="pain-label">Low Testosterone</div></div>
+              <div class="pain-item"><div class="pain-icon">🫃</div><div class="pain-label">Belly Fat Gain</div></div>
+              <div class="pain-item"><div class="pain-icon">🤒</div><div class="pain-label">Weak Immune System</div></div>
+            </div>
           </div>
         </div>
       </div>
+
       <div>
+        <div class="card">
+          <div class="card-header">Key Selling Points</div>
+          <div class="card-body">
+            <div class="info-row"><div class="info-label">World's First</div><div class="info-value">Fast-acting cortisol stress reducer — clinically proven to work in 48 hours</div></div>
+            <div class="info-row"><div class="info-label">Research</div><div class="info-value">5 years of research · 3 clinical trials · statistically significant (p&lt;0.05)</div></div>
+            <div class="info-row"><div class="info-label">No Ashwagandha</div><div class="info-value">Unlike competitors — no mixed-evidence herbs, no side effects, faster results</div></div>
+            <div class="info-row"><div class="info-label">Athletes</div><div class="info-value">Tudor Pro Cycling · FC Union Berlin · Swiss National Football · 1,000+ pro athletes</div></div>
+            <div class="info-row"><div class="info-label">Awards</div><div class="info-value">Innovator of the Year 2023 &amp; 2025 · Best-selling supplement in Switzerland</div></div>
+            <div class="info-row"><div class="info-label">Value</div><div class="info-value">3-Pack · ~$16.66/unit · full 30-day routine</div></div>
+          </div>
+        </div>
+
         <div class="card">
           <div class="card-header">Target Audiences</div>
           <div class="card-body">
             <div class="pill-group">
-              <span class="pill pill-hi">Fitness Enthusiasts</span>
-              <span class="pill pill-hi">Athletes &amp; Gym-Goers</span>
-              <span class="pill">Busy Professionals</span>
+              <span class="pill pill-red">High-Intensity Athletes</span>
+              <span class="pill pill-red">Fitness Enthusiasts</span>
+              <span class="pill pill-hi">Gym-Goers &amp; Weightlifters</span>
+              <span class="pill pill-hi">Busy Professionals</span>
               <span class="pill">Biohackers</span>
               <span class="pill">Wellness Creators</span>
-              <span class="pill">Recovery-Focused</span>
               <span class="pill">Sleep Optimizers</span>
+              <span class="pill">Recovery-Focused</span>
               <span class="pill">25–45 Age Range</span>
             </div>
           </div>
         </div>
-        <div class="card">
+
+        <div class="card" style="margin-bottom:0">
           <div class="card-header">Content Pillars</div>
           <div class="card-body">
-            <div class="hook-item">
-              <div class="hook-n">01</div>
-              <div><div class="hook-type">Recovery</div><div class="hook-text">Post-workout cortisol management — show the struggle and the solution</div></div>
-            </div>
-            <div class="hook-item">
-              <div class="hook-n">02</div>
-              <div><div class="hook-type">Sleep</div><div class="hook-text">REM improvement and waking up restored — daily impact of better sleep</div></div>
-            </div>
-            <div class="hook-item">
-              <div class="hook-n">03</div>
-              <div><div class="hook-type">Science</div><div class="hook-text">Cortisol as the "hidden enemy" — educate and convert with data-driven storytelling</div></div>
-            </div>
-            <div class="hook-item">
-              <div class="hook-n">04</div>
-              <div><div class="hook-type">Lifestyle</div><div class="hook-text">Performance &amp; wellness — how KA-EX fits your daily routine</div></div>
-            </div>
+            <div class="hook-item"><div class="hook-n">01</div><div><div class="hook-type">Recovery Science</div><div class="hook-text">Post-workout cortisol management — why high cortisol after training destroys your gains</div></div></div>
+            <div class="hook-item"><div class="hook-n">02</div><div><div class="hook-type">Sleep Quality</div><div class="hook-text">REM improvement — waking up restored and how better sleep = better training</div></div></div>
+            <div class="hook-item"><div class="hook-n">03</div><div><div class="hook-type">No Ashwagandha</div><div class="hook-text">KA-EX vs. the alternatives — why Swiss science beats trendy herbs</div></div></div>
+            <div class="hook-item"><div class="hook-n">04</div><div><div class="hook-type">Pro Athlete Trust</div><div class="hook-text">Tudor Pro Cycling, NFL coaches, Olympic medalists — why the pros use it</div></div></div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Founder Story -->
+    <div class="founder-card">
+      <div class="founder-img">👨‍🔬</div>
+      <div>
+        <div class="founder-name">Pedro Schmidt — Founder &amp; CEO</div>
+        <div class="founder-role">ETH Zurich Pharmacy Graduate · Swiss Science</div>
+        <div class="founder-text">Trusted by thousands of elite athletes and high performers worldwide, KA-EX® is the creation of Pedro Schmidt, a pharmacy graduate from ETH Zurich — the same university as Albert Einstein. Backed by oncology and pharmaceutical expertise, KA-EX® is clinically proven to lower cortisol, improve sleep, and support HRV. Launched in Switzerland in 2017 and awarded Innovator of the Year in both 2023 and 2025, it's now the best-selling supplement in Switzerland.</div>
+        <div class="cert-strip">
+          <span class="cert-badge good">5 Yrs Research</span>
+          <span class="cert-badge good">3 Clinical Trials</span>
+          <span class="cert-badge good">Peer-Reviewed</span>
+          <span class="cert-badge">Patented CH712761</span>
+          <span class="cert-badge">GMP Certified</span>
+          <span class="cert-badge">Innovator 2023</span>
+          <span class="cert-badge">Innovator 2025</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<!-- ── PRODUCT ── -->
+<!-- ══════════════════════════════════════════════ -->
+<!-- TAB: PRODUCT -->
+<!-- ══════════════════════════════════════════════ -->
 <div class="section" id="sec-product">
   <div class="sec-header">
     <div class="sec-label">Section 02</div>
     <div class="sec-title">Product Details</div>
-    <div class="sec-desc">KA-EX® PWD Cortisol Stress Reducer 3-Pack — Full Briefing</div>
+    <div class="sec-desc">KA-EX® Cortisol Stress Reducer — Multi-functional as a Swiss Army Knife</div>
   </div>
   <div class="content">
+
     <div class="product-layout">
       <div class="product-img-stack">
         <div class="product-img-main">
-          <img src="https://ka-ex.com/cdn/shop/files/2604_KA-EX_PWD_Cortisol-Stress-Reducer_24-pack_left_US.png?v=1774221262" alt="KA-EX Product">
+          <img src="https://ka-ex.com/cdn/shop/files/2604_KA-EX_PWD_Cortisol-Stress-Reducer_24-pack_left_US.png?v=1774221262" alt="KA-EX 3-Pack">
         </div>
         <div class="product-img-row">
           <div class="product-img-thumb"><img src="https://ka-ex.com/cdn/shop/files/260427_KA-EX_Website_CSR_RTM_01_1080x1350_e1c1ed19-a885-48b0-979d-5e07a607fd73.png?v=1777280216" alt="Mix"></div>
@@ -542,12 +513,10 @@ body{
           <div class="product-img-thumb"><img src="https://ka-ex.com/cdn/shop/files/260427_KA-EX_Website_CSR_RTM_03_1080x1350_adffe8ac-0d94-4f78-9c01-21f46805b9cf.png?v=1777280276" alt="Drink"></div>
         </div>
       </div>
+
       <div class="product-info">
         <div class="price-block">
-          <div class="price-row">
-            <div class="price-main">$49.99</div>
-            <div class="price-pack">3-Pack Bundle</div>
-          </div>
+          <div class="price-row"><div class="price-main">$49.99</div><div class="price-pack">3-Pack Bundle</div></div>
           <div class="price-original">$89.97 if purchased separately</div>
           <div class="price-save">Save 44%</div>
           <div class="amz-badge-row">
@@ -555,92 +524,188 @@ body{
             <span class="amz-asin">ASIN: B0BMXK62BD</span>
           </div>
         </div>
+
         <div class="card" style="margin-bottom:0">
-          <div class="card-header">Amazon Listing Highlights</div>
+          <div class="card-header">Two Formats — One Formula</div>
           <div class="card-body">
-            <ul class="bullet-list">
-              <li>Clinically studied: 36% faster cortisol return in peer-reviewed trials</li>
-              <li>Improves REM sleep by 16% and Heart Rate Variability (HRV) by 10%</li>
-              <li>Powder format absorbs faster than capsules — ideal for post-workout use</li>
-              <li>Key actives: Phosphatidylserine, L-Tryptophan, L-Glutamine, L-Cysteine</li>
-              <li>3-Pack provides 30-day supply for optimal cortisol management results</li>
-              <li>Informed Sport Certified — safe for drug-tested athletes</li>
-            </ul>
+            <p style="font-size:12px;color:rgba(0,0,0,.5);margin-bottom:12px">Both contain the same functional ingredients in the same dosage. Bioactive substances and alkaline ingredients are separated to ensure long-lasting quality.</p>
+            <div class="format-grid">
+              <div class="format-item">
+                <div class="format-icon">🧃</div>
+                <div class="format-name">Powder Sachet</div>
+                <div class="format-desc">Mix with 10–16 fl. oz cold water. Ideal for gym bags &amp; on-the-go. 3-Pack = 30-day supply.</div>
+              </div>
+              <div class="format-item">
+                <div class="format-icon">🫙</div>
+                <div class="format-name">Push-Cap Bottle</div>
+                <div class="format-desc">15.7 fl. oz. Push to activate &amp; mix. No shaker needed. Great for on-camera demos.</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-header">Key Ingredients &amp; Function</div>
-        <div class="card-body">
-          <div class="info-row"><div class="info-label">Phosphatidylserine</div><div class="info-value">Regulates exercise-induced cortisol spike — primary active ingredient</div></div>
-          <div class="info-row"><div class="info-label">L-Tryptophan</div><div class="info-value">Precursor to serotonin &amp; melatonin — improves REM sleep quality</div></div>
-          <div class="info-row"><div class="info-label">L-Glutamine</div><div class="info-value">Muscle repair &amp; immune support post-intense training</div></div>
-          <div class="info-row"><div class="info-label">L-Cysteine</div><div class="info-value">Antioxidant — neutralizes oxidative stress from exercise</div></div>
-          <div class="info-row"><div class="info-label">Electrolytes + B-Vits</div><div class="info-value">Rehydration, energy metabolism, nerve &amp; muscle function</div></div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">Clinical Evidence</div>
-        <div class="card-body">
-          <div class="info-row"><div class="info-label">Cortisol</div><div class="info-value">↓ 36% normalization in double-blind, peer-reviewed trial</div></div>
-          <div class="info-row"><div class="info-label">REM Sleep</div><div class="info-value">↑ 16% improvement in polysomnography-measured deep sleep</div></div>
-          <div class="info-row"><div class="info-label">HRV</div><div class="info-value">↑ 10% heart rate variability — key recovery marker</div></div>
-          <div class="info-row"><div class="info-label">Energy</div><div class="info-value">↑ 9% self-reported at 4-week mark</div></div>
-          <div class="info-row"><div class="info-label">Mood</div><div class="info-value">↑ 8% validated mood assessment (POMS scale)</div></div>
+    <!-- Quote block -->
+    <div class="quote-block">
+      <div class="quote-text">"The Recovery Effect is Extreme."</div>
+      <div class="quote-source">Scientists of the Swiss National Football Team — Published in Blick, Switzerland's largest newspaper, following completion of the KA-EX® clinical study</div>
+    </div>
+
+    <!-- Swiss Army Knife -->
+    <div class="card">
+      <div class="card-header"><span class="red">8-Function</span> Swiss Army Knife Formula</div>
+      <div class="card-body" style="padding:0">
+        <div class="sak-grid">
+          <div class="sak-item">
+            <div class="sak-title"><span class="sak-dot"></span>Cortisol Reducer</div>
+            <div class="sak-desc">Phosphatidylserine normalizes cortisol-level, supporting naturally high testosterone balance.</div>
+            <div class="sak-active">Phosphatidylserine</div>
+          </div>
+          <div class="sak-item">
+            <div class="sak-title"><span class="sak-dot"></span>Muscle Repair</div>
+            <div class="sak-desc">Accelerated muscle recovery of peak torque and minimized soreness.</div>
+            <div class="sak-active">L-Glutamine</div>
+          </div>
+          <div class="sak-item">
+            <div class="sak-title"><span class="sak-dot"></span>REM Sleep</div>
+            <div class="sak-desc">Optimizes REM sleep quality and deep sleep duration by +15%.</div>
+            <div class="sak-active">L-Tryptophane</div>
+          </div>
+          <div class="sak-item">
+            <div class="sak-title"><span class="sak-dot"></span>Dopamine Booster</div>
+            <div class="sak-desc">Optimal dopamine levels and mental well-being for performance focus.</div>
+            <div class="sak-active">L-Tyrosine</div>
+          </div>
+          <div class="sak-item">
+            <div class="sak-title"><span class="sak-dot"></span>Glycogen Restore</div>
+            <div class="sak-desc">Low-calorie functional sugars restore muscle &amp; liver glycogen, promoting nutrient absorption.</div>
+            <div class="sak-active">Functional Sugars</div>
+          </div>
+          <div class="sak-item">
+            <div class="sak-title"><span class="sak-dot"></span>pH Neutralizer</div>
+            <div class="sak-desc">Alkali salts neutralize acids in muscles and tissues for faster recovery.</div>
+            <div class="sak-active">Alkali Salts</div>
+          </div>
+          <div class="sak-item">
+            <div class="sak-title"><span class="sak-dot"></span>Superior Electrolytes</div>
+            <div class="sak-desc">All 4 electrolytes — magnesium, calcium, potassium, sodium — for full rehydration.</div>
+            <div class="sak-active">Mg, Ca, K, Na</div>
+          </div>
+          <div class="sak-item">
+            <div class="sak-title"><span class="sak-dot"></span>Skin &amp; DNA Protection</div>
+            <div class="sak-desc">Potent antioxidants protect DNA from ROS, reducing inflammation and skin aging.</div>
+            <div class="sak-active">L-Cysteine + Antioxidants</div>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- Clinical Evidence -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><span class="red">5 Years Research · 3 Clinical Trials</span></div>
+        <div class="card-body">
+          <div class="info-row"><div class="info-label">Cortisol Stress</div><div class="info-value" style="color:var(--red);font-weight:700">↓ 36% — Statistically significant (p&lt;0.05), peer-reviewed journal</div></div>
+          <div class="info-row"><div class="info-label">REM Sleep</div><div class="info-value">↑ 15% duration improvement (polysomnography-measured)</div></div>
+          <div class="info-row"><div class="info-label">Deep Sleep</div><div class="info-value">↑ 6% duration improvement</div></div>
+          <div class="info-row"><div class="info-label">HRV / Avg Stress</div><div class="info-value">↓ 10% average stress (improved HRV pattern)</div></div>
+          <div class="info-row"><div class="info-label">Daily Energy</div><div class="info-value">↑ 9% increased energy level</div></div>
+          <div class="info-row"><div class="info-label">Mood Disturbances</div><div class="info-value">↓ 8% total mood disturbance (POMS scale)</div></div>
+          <div class="info-row"><div class="info-label">Fatigue</div><div class="info-value">↓ 9% fatigue assessment scale</div></div>
+          <div class="info-row"><div class="info-label">Resting HR</div><div class="info-value">↓ 4% resting heart rate improvement</div></div>
+          <div class="info-row"><div class="info-label">Speed</div><div class="info-value">Works in 48 hours — effects measurable from first use</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Certifications &amp; Quality</div>
+        <div class="card-body">
+          <div class="info-row"><div class="info-label">Testing</div><div class="info-value">Every batch tested for banned substances — Informed Sport Program</div></div>
+          <div class="info-row"><div class="info-label">Manufacturing</div><div class="info-value">GMP Certified (Good Manufacturing Practice)</div></div>
+          <div class="info-row"><div class="info-label">Patent</div><div class="info-value">CH712761 — Swiss global patent on the formula</div></div>
+          <div class="info-row"><div class="info-label">Dietary</div><div class="info-value">Vegan · Cruelty-Free · Caffeine-Free · Gluten-Free · Lactose-Free</div></div>
+          <div class="info-row"><div class="info-label">No Ashwagandha</div><div class="info-value">Zero — KA-EX® is proven stronger and faster without it</div></div>
+          <div class="info-row"><div class="info-label">No Caffeine</div><div class="info-value">Caffeine raises cortisol — KA-EX® is the opposite</div></div>
+          <div class="cert-strip" style="margin-top:14px">
+            <span class="cert-badge good">Vegan</span>
+            <span class="cert-badge good">Cruelty Free</span>
+            <span class="cert-badge good">Caffeine Free</span>
+            <span class="cert-badge good">Gluten Free</span>
+            <span class="cert-badge good">Lactose Free</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RTM How-to -->
     <div class="card">
-      <div class="card-header">Ready To Mix — How To Use On Camera</div>
+      <div class="card-header">Ready To Mix — 3 Steps To Film On Camera</div>
       <div class="card-body" style="padding:0">
         <div class="rtm-grid">
           <div class="rtm-item">
             <img class="rtm-img" src="https://ka-ex.com/cdn/shop/files/260427_KA-EX_Website_CSR_RTM_01_1080x1350_e1c1ed19-a885-48b0-979d-5e07a607fd73.png?v=1777280216" alt="Mix">
-            <div class="rtm-foot"><div class="rtm-num">STEP 01</div><div class="rtm-label">Mix</div><div class="rtm-desc">Mix with 500ml cold water. Ready.</div></div>
+            <div class="rtm-foot"><div class="rtm-num">STEP 01</div><div class="rtm-label">Mix</div><div class="rtm-desc">Open sachet, pour into 500ml cold water.</div></div>
           </div>
           <div class="rtm-item">
             <img class="rtm-img" src="https://ka-ex.com/cdn/shop/files/260427_KA-EX_Website_CSR_RTM_02_1080x1350_320ff693-e6fc-43cc-953a-9e1551c6d7d2.png?v=1777280245" alt="Shake">
-            <div class="rtm-foot"><div class="rtm-num">STEP 02</div><div class="rtm-label">Shake</div><div class="rtm-desc">Energy activated.</div></div>
+            <div class="rtm-foot"><div class="rtm-num">STEP 02</div><div class="rtm-label">Shake</div><div class="rtm-desc">Energy activated. Or push the cap on the bottle format.</div></div>
           </div>
           <div class="rtm-item">
             <img class="rtm-img" src="https://ka-ex.com/cdn/shop/files/260427_KA-EX_Website_CSR_RTM_03_1080x1350_adffe8ac-0d94-4f78-9c01-21f46805b9cf.png?v=1777280276" alt="Drink">
-            <div class="rtm-foot"><div class="rtm-num">STEP 03</div><div class="rtm-label">Drink</div><div class="rtm-desc">Let's go.</div></div>
+            <div class="rtm-foot"><div class="rtm-num">STEP 03</div><div class="rtm-label">Drink</div><div class="rtm-desc">Post-workout AND on rest days. Results in 48 hours.</div></div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Endorsements -->
     <div class="card">
-      <div class="card-header">Trusted By World-Class Athletes</div>
+      <div class="card-header">Used by 1,000s of Pro Athletes — Endorsed by Champions</div>
       <div class="card-body" style="padding:0">
-        <div class="athlete-strip">
-          <div class="athlete-card">
-            <img class="athlete-img" src="https://ka-ex.com/cdn/shop/files/2609_Ka-EX_Website_Laragut.jpg?v=1773954560" alt="Lara Gut">
+        <div class="endorse-grid">
+          <div class="endorse-card">
+            <img class="endorse-img" src="https://ka-ex.com/cdn/shop/files/2609_Ka-EX_Website_Laragut.jpg?v=1773954560" alt="Lara Gut">
             <div>
-              <div class="athlete-name">Lara Gut-Behrami</div>
-              <div class="athlete-role">Olympic Gold Medalist · 48× Career Wins</div>
-              <div class="athlete-quote">"At KA-EX, I've found high-quality products, a clear vision, and an impressive track record of scientific success."</div>
+              <div class="endorse-name">Lara Gut-Behrami</div>
+              <div class="endorse-role">Olympic Gold · 48× World Cup Winner · 2× World Champion</div>
+              <div class="endorse-quote">"At KA-EX, I've found high-quality products, a clear vision, and an impressive track record of scientific success."</div>
             </div>
           </div>
-          <div class="athlete-card">
-            <img class="athlete-img" src="https://ka-ex.com/cdn/shop/files/2603_Ka-EX_Website_Cancellara.png?v=1774309497" alt="Cancellara">
+          <div class="endorse-card">
+            <img class="endorse-img" src="https://ka-ex.com/cdn/shop/files/2603_Ka-EX_Website_Cancellara.png?v=1774309497" alt="Cancellara">
             <div>
-              <div class="athlete-name">Fabian Cancellara</div>
-              <div class="athlete-role">2× Olympic Gold · President Tudor Pro Cycling</div>
-              <div class="athlete-quote">"KA-EX is the perfect complement to offer our riders the best possible conditions for top performance."</div>
+              <div class="endorse-name">Fabian Cancellara</div>
+              <div class="endorse-role">2× Olympic Gold · CEO Tudor Pro Cycling Team</div>
+              <div class="endorse-quote">"KA-EX is the perfect complement to offer our riders the best possible conditions for top performance."</div>
+            </div>
+          </div>
+          <div class="endorse-card" style="background:#fff">
+            <div style="width:56px;height:56px;border-radius:50%;background:#e5e5e5;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px">🏈</div>
+            <div>
+              <div class="endorse-name">Yo Murphy</div>
+              <div class="endorse-role">Former NFL Player · Coach · VP Pro Sports House of Athlete USA</div>
+              <div class="endorse-quote">"Recovery is one of the cornerstones of our training concept. KA-EX® is the best complement for holistic support in the recovery phase."</div>
+            </div>
+          </div>
+          <div class="endorse-card" style="background:#fff">
+            <div style="width:56px;height:56px;border-radius:50%;background:#e5e5e5;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px">⚽</div>
+            <div>
+              <div class="endorse-name">Martin Krüger</div>
+              <div class="endorse-role">Endurance Trainer · 1. FC Union Berlin</div>
+              <div class="endorse-quote">"KA-EX® is a first-class product and we have made it compulsory in the weeks when two or more matches are taking place."</div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 </div>
 
-<!-- ── CONTENT STRATEGY ── -->
+<!-- ══════════════════════════════════════════════ -->
+<!-- TAB: CONTENT STRATEGY -->
+<!-- ══════════════════════════════════════════════ -->
 <div class="section" id="sec-strategy">
   <div class="sec-header">
     <div class="sec-label">Section 03</div>
@@ -648,77 +713,291 @@ body{
     <div class="sec-desc">Hooks, scenarios, caption templates &amp; hashtags</div>
   </div>
   <div class="content">
-    <div class="card">
-      <div class="card-header">High-Converting Video Hooks</div>
-      <div class="card-body">
-        <div class="hook-item"><div class="hook-n">01</div><div><div class="hook-type">Problem Hook</div><div class="hook-text">"I was training 5x a week but gaining fat and feeling exhausted — turns out it was my cortisol…"</div></div></div>
-        <div class="hook-item"><div class="hook-n">02</div><div><div class="hook-type">Data Hook</div><div class="hook-text">"This supplement reduced my cortisol by 36% — here's what happened to my body in 30 days"</div></div></div>
-        <div class="hook-item"><div class="hook-n">03</div><div><div class="hook-type">Transformation Hook</div><div class="hook-text">"Same workouts. Same diet. But I finally started sleeping better and recovering faster. Here's why."</div></div></div>
-        <div class="hook-item"><div class="hook-n">04</div><div><div class="hook-type">Education Hook</div><div class="hook-text">"Cortisol is the reason you're not losing weight even when you're eating right and working out"</div></div></div>
-        <div class="hook-item"><div class="hook-n">05</div><div><div class="hook-type">ASMR / Mix Hook</div><div class="hook-text">"Watch me add KA-EX to my post-workout shake 🎬 [close-up powder mixing sound]"</div></div></div>
-        <div class="hook-item"><div class="hook-n">06</div><div><div class="hook-type">Skeptic Hook</div><div class="hook-text">"I didn't believe stress supplements worked until I tried this for 2 weeks and my HRV went up 10%"</div></div></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header">Creative Scenarios</div>
-      <div class="card-body">
-        <table class="scen-table">
-          <thead><tr><th>Format</th><th>Scenario</th><th>CTA</th><th>Audience</th></tr></thead>
-          <tbody>
-            <tr><td><span class="tag">Day-in-Life</span></td><td>Morning routine + KA-EX mixing + evening HRV check-in</td><td>"Link in bio / TikTok Shop"</td><td>Wellness</td></tr>
-            <tr><td><span class="tag">Before/After</span></td><td>30-day cortisol challenge — energy, sleep, gym performance tracked</td><td>"3-Pack in my bio"</td><td>Fitness</td></tr>
-            <tr><td><span class="tag">Education</span></td><td>Cortisol 101: what it is, why it spikes, how KA-EX helps — on-screen graphics</td><td>"Shop link below"</td><td>Biohacker</td></tr>
-            <tr><td><span class="tag">Demo</span></td><td>Unboxing 3-Pack, mixing on camera, taste test — ASMR or vlog style</td><td>"Tap the cart"</td><td>All</td></tr>
-            <tr><td><span class="tag">Review</span></td><td>Honest 2-week review: sleep, gym performance, stress levels changed</td><td>"Worth it — link below"</td><td>Skeptics</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-header">Caption Templates</div>
-        <div class="card-body">
-          <div class="caption-label">Template 1 — Recovery</div>
-          <div class="caption-box">"High cortisol = bad sleep, slow recovery, more body fat. KA-EX PWD helped me break the cycle 🎯 Tap the link in bio to grab the 3-Pack #cortisol #recovery #wellness"</div>
-          <div class="caption-label">Template 2 — Data-Driven</div>
-          <div class="caption-box">"36% cortisol reduction. +16% REM sleep. +10% HRV. I tracked every metric for 30 days 👇 Shop via TikTok Shop link #biohacking #stressrelief #kaex"</div>
-          <div class="caption-label">Template 3 — Lifestyle</div>
-          <div class="caption-box">"The missing piece in my fitness stack wasn't protein or creatine — it was cortisol management. KA-EX PWD 3-Pack changed my recovery game 💪"</div>
+
+    <!-- Round 1 learnings -->
+    <div class="round1-bar">
+      <div class="round1-col" style="flex:1">
+        <div class="round1-title">What Round 1 Taught Us — Scripts That Outperformed</div>
+        <div class="round1-items">
+          <div class="round1-item">Long-form training/cortisol education — "cortisol powers performance, but balance drives progress"</div>
+          <div class="round1-item">Ultra-short punchy mechanism — "Sore 3 days after your workout?" crushed it</div>
+          <div class="round1-item">Personal testimony + switching story (boxing creator) drove highest conversions</div>
         </div>
       </div>
-      <div class="card">
+      <div class="round1-col" style="flex:1;border-left:1px solid rgba(0,0,0,.07);padding-left:28px">
+        <div class="round1-title">Why They Worked</div>
+        <div class="round1-items">
+          <div class="round1-item">"Training" + "cortisol" framing — audience recognises the problem before the solution</div>
+          <div class="round1-item">Specific numbers land harder than general claims: -36%, 48 hours, 72 hours</div>
+          <div class="round1-item">Matter-of-fact tone outperformed excited testimonial tone every time</div>
+          <div class="round1-item">Education-first builds credibility faster than product-first</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- No Ashwagandha angle -->
+    <div class="no-ash">
+      <div class="no-ash-left">
+        <div class="no-ash-title">Say <span>No</span> to Ashwagandha.</div>
+        <div class="no-ash-desc">This is a credibility shortcut — not a takedown. Frame it as: "I already tried the obvious thing and it wasn't fast enough." Clinical studies show Ashwagandha requires 8–12 weeks at high doses for 20–32% reduction. KA-EX delivers -36% cortisol in 48 hours — peer-reviewed and patented.</div>
+      </div>
+      <div class="no-ash-right">
+        <div class="no-ash-point"><span class="no-ash-tag">Proven</span> Independent peer-reviewed clinical study — 3 trials total</div>
+        <div class="no-ash-point"><span class="no-ash-tag">Stronger</span> -36% cortisol vs. 20–32% with Ashwagandha</div>
+        <div class="no-ash-point"><span class="no-ash-tag">Faster</span> 48 hours vs. 8–12 weeks</div>
+        <div class="no-ash-point"><span class="no-ash-tag">Safer</span> No stimulants, no side effects — GMP Swiss formula</div>
+      </div>
+    </div>
+
+    <!-- SCRIPT 1 — The Expert -->
+    <div class="script-card">
+      <div class="script-card-header">
+        <div class="script-card-title">Script 1 — The Expert</div>
+        <div class="script-card-meta">
+          <span class="script-meta-pill">Sports Scientist / Nutritionist / Trainer</span>
+          <span class="script-meta-pill">60–75 sec</span>
+          <span class="script-meta-pill red">TOF · Unaware → Problem Aware</span>
+        </div>
+      </div>
+      <div class="hook-cards">
+        <div class="hook-card">
+          <div class="hook-num">Hook 1 — Authority</div>
+          <div class="hook-quote">"After working with athletes on recovery for years, one question comes up more than any other: why isn't my supplement stack actually working?"</div>
+        </div>
+        <div class="hook-card">
+          <div class="hook-num">Hook 2 — Ashwagandha Switch</div>
+          <div class="hook-quote">"I tried ashwagandha for months. My cortisol didn't shift. Here's what actually worked — and why it makes biological sense."</div>
+        </div>
+        <div class="hook-card">
+          <div class="hook-num">Hook 3 — Formulation</div>
+          <div class="hook-quote">"Most cortisol supplements fail because they're missing clinical-grade Phosphatidylserine at the right dose. Here's what that means."</div>
+        </div>
+      </div>
+      <div class="creator-brief-grid">
+        <div class="cb-item">
+          <div class="cb-label">Vibe</div>
+          <div class="cb-value">You've reviewed the science. You're not easily impressed. This one earns it.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Tone</div>
+          <div class="cb-value">Calm authority. Explaining to a colleague — not pitching to a consumer.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Language</div>
+          <div class="cb-value">Simplify "Phosphatidylserine" to "the PS compound" on second mention. "Clinical-grade" and "25 ingredients" should both land. "No caffeine, no taurine" matters.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Opening Scene</div>
+          <div class="cb-value">Natural expert environment — gym floor, clinic desk, supplement workspace. Context communicates expertise without stating credentials first.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Scene Change</div>
+          <div class="cb-value">Only when holding or introducing the product.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Authenticity</div>
+          <div class="cb-value">Real environment does the credibility work. If you've personally used KA-EX, include one genuine observation — but only if true. Don't oversell.</div>
+        </div>
+      </div>
+      <div class="cta-strip">
+        <div class="cta-item">
+          <div class="cta-label">Primary CTA</div>
+          <div class="cta-text">"See the Clinical Studies → ka-ex.com"</div>
+        </div>
+        <div class="cta-item">
+          <div class="cta-label">Alternate CTA</div>
+          <div class="cta-text">"The Research Is All There → Link Below"</div>
+        </div>
+        <div class="cta-item" style="background:#f8f8f8">
+          <div class="cta-label">Test Priority</div>
+          <div class="cta-text" style="color:#0a0a0a;font-weight:600;font-size:11px">Hook 1 vs. Hook 2 (authority vs. ashwagandha story)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT 2 — Marco (Male Athlete) -->
+    <div class="script-card">
+      <div class="script-card-header">
+        <div class="script-card-title">Script 2 — Marco (Male Athlete)</div>
+        <div class="script-card-meta">
+          <span class="script-meta-pill">Male — Gym, HYROX, CrossFit, Cycling, Combat</span>
+          <span class="script-meta-pill">55–65 sec</span>
+          <span class="script-meta-pill red">TOF · Unaware → Problem Aware</span>
+        </div>
+      </div>
+      <div class="hook-cards">
+        <div class="hook-card">
+          <div class="hook-num">Hook 1 — Pain</div>
+          <div class="hook-quote">"Training five days a week but feeling worse, not better? I figured out why — and it's not your programme."</div>
+        </div>
+        <div class="hook-card">
+          <div class="hook-num">Hook 2 — Switch</div>
+          <div class="hook-quote">"I took ashwagandha for three months. Didn't feel a thing. This is what I switched to — and what changed."</div>
+        </div>
+        <div class="hook-card">
+          <div class="hook-num">Hook 3 — Data</div>
+          <div class="hook-quote">"Your cortisol stays elevated for up to 72 hours after hard training. Most athletes have no idea what that's doing to their progress."</div>
+        </div>
+      </div>
+      <div class="creator-brief-grid">
+        <div class="cb-item">
+          <div class="cb-label">Vibe</div>
+          <div class="cb-value">Gym buddy who figured something out. Peer to peer. Not a spokesperson.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Tone</div>
+          <div class="cb-value">Direct and matter-of-fact. The less you sell, the more it sells.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Language</div>
+          <div class="cb-value">"Cortisol" appears early. Ashwagandha = credibility move, not a takedown ("it works, it's just too slow"). Include one personal metric if you have it: HRV, soreness timeline, sleep score. "72 hours" is a strong claim — say it plainly.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Opening Scene</div>
+          <div class="cb-value">Post-workout context — gym, outdoor training, anywhere that establishes you as a real athlete. Real kit. Real environment. You should look like you've just done something.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Scene Change</div>
+          <div class="cb-value">When you pick up or reference the product.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Authenticity</div>
+          <div class="cb-value">Sweat, actual kit, real training environment. "Yes I'm paid for this but I actually use it" is fine to include if it fits your style.</div>
+        </div>
+      </div>
+      <div class="cta-strip">
+        <div class="cta-item">
+          <div class="cta-label">Primary CTA</div>
+          <div class="cta-text">"See the Clinical Studies → ka-ex.com"</div>
+        </div>
+        <div class="cta-item">
+          <div class="cta-label">Alternate CTA</div>
+          <div class="cta-text">"Fix Your Recovery Metrics → ka-ex.com"</div>
+        </div>
+        <div class="cta-item" style="background:#f8f8f8">
+          <div class="cta-label">Test Priority</div>
+          <div class="cta-text" style="color:#0a0a0a;font-weight:600;font-size:11px">Hook 1 vs. Hook 3 (pain vs. data) + Ashwagandha mention vs. without</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT 3 — Eleanor (Active Professional) -->
+    <div class="script-card">
+      <div class="script-card-header">
+        <div class="script-card-title">Script 3 — Eleanor (Active Professional)</div>
+        <div class="script-card-meta">
+          <span class="script-meta-pill">Female — Professional, Trains 3–5×/Week, High-Performing</span>
+          <span class="script-meta-pill">50–65 sec</span>
+          <span class="script-meta-pill red">TOF · Problem Aware → Solution Aware</span>
+        </div>
+      </div>
+      <div class="hook-cards">
+        <div class="hook-card">
+          <div class="hook-num">Hook 1 — Tired but Wired</div>
+          <div class="hook-quote">"Exhausted all day, but the second you lie down your brain turns on. I finally found out why that happens."</div>
+        </div>
+        <div class="hook-card">
+          <div class="hook-num">Hook 2 — Failed Solutions</div>
+          <div class="hook-quote">"Months of magnesium, melatonin, ashwagandha. Still waking up at 3AM. This is what changed it."</div>
+        </div>
+        <div class="hook-card">
+          <div class="hook-num">Hook 3 — Reframe</div>
+          <div class="hook-quote">"Waking up at 3AM with racing thoughts isn't just stress. It's a cortisol problem — and there's a clinical solution for it."</div>
+        </div>
+      </div>
+      <div class="creator-brief-grid">
+        <div class="cb-item">
+          <div class="cb-label">Vibe</div>
+          <div class="cb-value">Honest personal story. You tried things. They didn't work. This addressed the actual problem.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Tone</div>
+          <div class="cb-value">Calm and real. Not dramatic. You're not amazed — you're relieved.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Language</div>
+          <div class="cb-value">"Tired but wired" is the exact phrase — use it or a natural equivalent. The failed solutions sequence establishes you're not someone who buys anything. "Cortisol blocks melatonin" is the mechanism moment — say it clearly. Be honest about timeline — real timelines are more credible.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Opening Scene</div>
+          <div class="cb-value">Real, lived-in environment — morning or evening. Not produced. Could be kitchen, bedroom, bathroom. Something that communicates your real life.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Scene Change</div>
+          <div class="cb-value">Only when introducing the product.</div>
+        </div>
+        <div class="cb-item">
+          <div class="cb-label">Authenticity</div>
+          <div class="cb-value">Morning-after-bad-sleep or evening-before-bed context both work. Natural light, real environment. This should feel like something you'd send a friend.</div>
+        </div>
+      </div>
+      <div class="cta-strip">
+        <div class="cta-item">
+          <div class="cta-label">Primary CTA</div>
+          <div class="cta-text">"End the Tired but Wired Cycle → ka-ex.com"</div>
+        </div>
+        <div class="cta-item">
+          <div class="cta-label">Alternate CTA</div>
+          <div class="cta-text">"Lower Your Cortisol in 48 Hours → ka-ex.com"</div>
+        </div>
+        <div class="cta-item" style="background:#f8f8f8">
+          <div class="cta-label">Test Priority</div>
+          <div class="cta-text" style="color:#0a0a0a;font-weight:600;font-size:11px">Hook 2 vs. Hook 3 (solution journey vs. reframe) + morning vs. evening opening</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hashtags & Audio -->
+    <div class="grid-2">
+      <div class="card" style="margin-bottom:0">
+        <div class="card-header">Caption Templates (by Script)</div>
+        <div class="card-body">
+          <div class="caption-label">Expert — Formulation Angle</div>
+          <div class="caption-box">"Most cortisol products skip the compound that actually has clinical evidence. KA-EX uses Phosphatidylserine — 25 ingredients, 3 clinical trials, -36% cortisol in 48h. No stimulants. Link below. #cortisol #swissscience #kaex"</div>
+          <div class="caption-label">Marco — Athlete Switch</div>
+          <div class="caption-box">"3 months of ashwagandha. Zero shift in my recovery metrics. Switched to KA-EX — cortisol down 36% in 48 hours, sleep quality up, soreness down. The data is there. See clinical studies → ka-ex.com #gymrecovery #biohacking #kaex"</div>
+          <div class="caption-label">Eleanor — Tired but Wired</div>
+          <div class="caption-box">"Magnesium, melatonin, ashwagandha — tried all of it. Still waking at 3AM. Turns out elevated cortisol blocks melatonin production entirely. KA-EX addresses the root cause. Within a week, fewer wake-ups. Within two, the 3AM thing had basically stopped. Link below #tiredbutwired #cortisol #sleepbetter"</div>
+        </div>
+      </div>
+      <div class="card" style="margin-bottom:0">
         <div class="card-header">Hashtags &amp; Audio</div>
         <div class="card-body">
-          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:rgba(0,0,0,.35);text-transform:uppercase;margin-bottom:10px">Recommended Hashtags</div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:rgba(0,0,0,.35);text-transform:uppercase;margin-bottom:10px">Primary Hashtags</div>
           <div class="pill-group">
-            <span class="pill pill-hi">#cortisol</span>
-            <span class="pill pill-hi">#cortisolcocktail</span>
+            <span class="pill pill-red">#kaex</span>
+            <span class="pill pill-red">#cortisol</span>
+            <span class="pill pill-red">#cortisolcocktail</span>
+            <span class="pill pill-red">#tiredbutwired</span>
+            <span class="pill pill-hi">#swissscience</span>
+            <span class="pill pill-hi">#noashwagandha</span>
             <span class="pill">#stressrelief</span>
             <span class="pill">#recovery</span>
             <span class="pill">#biohacking</span>
-            <span class="pill">#kaex</span>
-            <span class="pill">#wellnessroutine</span>
             <span class="pill">#gymrecovery</span>
             <span class="pill">#sleepbetter</span>
             <span class="pill">#hrv</span>
             <span class="pill pill-hi">#tiktokmademebuyit</span>
-            <span class="pill">#supplementcheck</span>
           </div>
-          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:rgba(0,0,0,.35);text-transform:uppercase;margin:16px 0 10px">Audio Style</div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:rgba(0,0,0,.35);text-transform:uppercase;margin:14px 0 8px">Audio Style</div>
           <div class="pill-group">
-            <span class="pill">Trending wellness</span>
-            <span class="pill">POV voiceover</span>
-            <span class="pill">ASMR mixing sounds</span>
-            <span class="pill">Lo-fi beats</span>
-            <span class="pill">Motivational BGM</span>
+            <span class="pill">POV voiceover — calm, matter-of-fact</span>
+            <span class="pill">ASMR powder + cap push</span>
+            <span class="pill">Lo-fi study beats</span>
+            <span class="pill">Minimal / no music (Expert script)</span>
           </div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:rgba(0,0,0,.35);text-transform:uppercase;margin:14px 0 8px">On-Screen CTA Overlays</div>
+          <div style="font-size:11.5px;color:rgba(0,0,0,.6);line-height:1.6">Always include on-screen text CTA matching the script. Keep key stats (-36%, 48 hours, 72 hours) as text overlays — specific numbers drive more clicks than general claims.</div>
         </div>
       </div>
     </div>
+
   </div>
 </div>
 
-<!-- ── DO'S & DON'TS ── -->
+<!-- ══════════════════════════════════════════════ -->
+<!-- TAB: DO'S & DON'TS -->
+<!-- ══════════════════════════════════════════════ -->
 <div class="section" id="sec-dosdonts">
   <div class="sec-header">
     <div class="sec-label">Section 04</div>
@@ -728,46 +1007,50 @@ body{
   <div class="content">
     <div class="dd-warning">
       <span class="dd-warning-icon">⚠️</span>
-      <span><strong style="color:#b8860b">Important:</strong> All health claims must be accurate and substantiated. Medical claims require FDA disclaimer. Pattern reserves the right to request revisions on non-compliant content.</span>
+      <span><strong style="color:#b8860b">Important:</strong> All health claims must be accurate and substantiated. Always add FDA disclaimer when using clinical stats. Pattern reserves the right to request revisions on non-compliant content before posting.</span>
     </div>
     <div class="dd-grid">
       <div class="dd-col dd-col-do">
         <div class="dd-col-head"><div class="dd-icon">✓</div>DO'S</div>
         <div class="dd-items">
-          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Show the mixing process — powder-to-drink ASMR style performs very well on TikTok</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Share your personal wellness journey and how KA-EX fits authentically into YOUR routine</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Cite clinical data accurately: "up to 36% cortisol reduction in studies" with disclaimer</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Show the mixing process — powder-to-drink or push-cap ASMR performs extremely well on TikTok</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Emphasize "No Ashwagandha" — this is a proven hook topic on wellness TikTok</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Show KA-EX on REST DAYS too — explain the 48-hour cortisol cycle and why daily use matters</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Cite clinical data accurately: "up to 36% cortisol reduction in peer-reviewed studies" + disclaimer</span></div>
           <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Show product clearly on camera — full label visible for at least 3 seconds</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Include a clear #ad or #sponsored disclosure per FTC guidelines in caption and on-screen</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Use #TikTokShop and shop link in caption with a clear CTA</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Feature the 3-Pack bundle to highlight value — show all three pouches on camera</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Include on-screen text with key stats (36%, +16% REM, etc.) for scroll-stopping power</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Mention real athlete endorsements (Lara Gut, Fabian Cancellara) to build credibility</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Use smartwatch / HRV / sleep app screenshots to show personal data — hugely credible on TikTok</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Mention Tudor Pro Cycling, Lara Gut-Behrami, or Fabian Cancellara for immediate credibility</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Include #ad or #sponsored disclosure per FTC guidelines — in caption AND on-screen</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Reference the Swiss Science story — ETH Zurich, 5 years research, 3 clinical trials, globally patented</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-do">✓</span><span>Highlight "No caffeine" — caffeine actually raises cortisol, KA-EX is the anti-stress alternative</span></div>
         </div>
       </div>
       <div class="dd-col dd-col-dont">
         <div class="dd-col-head"><div class="dd-icon">✗</div>DON'TS</div>
         <div class="dd-items">
           <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Never claim KA-EX "cures," "treats," or "prevents" any disease or medical condition</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Don't exaggerate results — say "helped me" or "in studies" rather than absolute guarantees</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Avoid comparing KA-EX negatively to competitor products by name</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Never create fake before/after transformations or fabricate testimonials</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Don't skip the #ad / #paid disclosure — FTC compliance is required</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Avoid targeting content at users under 18 — KA-EX is for adults only</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Don't post without Pattern approval if content includes modified health claims</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Don't attack Ashwagandha competitor brands by name — frame it as a science comparison only</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Don't exaggerate — say "up to 36% in clinical studies" not "will definitely reduce your cortisol by 36%"</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Never create fake before/after transformations or fabricate personal testimonials</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Don't skip the #ad / #paid disclosure — FTC compliance is required on every post</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Avoid targeting content at users under 18 — KA-EX is an adult supplement</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Don't post content with modified health claims without Pattern review first</span></div>
           <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Never state KA-EX replaces doctor-prescribed medication or mental health treatment</span></div>
-          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Don't edit out the FDA disclaimer if displaying clinical statistics on screen</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Don't edit out the FDA disclaimer when displaying clinical statistics on screen</span></div>
+          <div class="dd-item"><span class="dd-dot dd-dot-dont">✗</span><span>Don't only show it post-workout — missing the "rest day" use case is leaving content opportunity on the table</span></div>
         </div>
       </div>
     </div>
     <div class="fda-box">
       <div class="fda-title">FDA Required Disclaimer</div>
-      These statements have not been evaluated by the Food and Drug Administration. KA-EX® PWD Cortisol Stress Reducer is not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary. Consult your healthcare provider before use if you are pregnant, nursing, taking medication, or have a medical condition.
+      These statements have not been evaluated by the Food and Drug Administration. KA-EX® Cortisol Stress Reducer is not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary. Consult your healthcare provider before use if you are pregnant, nursing, taking medication, or have a medical condition.
     </div>
   </div>
 </div>
 
-<!-- ── DELIVERABLES ── -->
+<!-- ══════════════════════════════════════════════ -->
+<!-- TAB: DELIVERABLES -->
+<!-- ══════════════════════════════════════════════ -->
 <div class="section" id="sec-deliverables">
   <div class="sec-header">
     <div class="sec-label">Section 05</div>
@@ -780,16 +1063,16 @@ body{
       <div class="card-body">
         <div class="deliv-grid">
           <div>
-            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">1–2 TikTok Videos (15–60 sec)</div><div class="deliv-desc">Authentic product feature with hook, demo, CTA</div></div></div>
-            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">FTC #Ad Disclosure</div><div class="deliv-desc">Caption AND verbally or on-screen within first 3 seconds</div></div></div>
-            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">TikTok Shop Link</div><div class="deliv-desc">Direct affiliate link to ASIN B0BMXK62BD in bio/caption</div></div></div>
-            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">Product Clearly On-Screen</div><div class="deliv-desc">Label visible for minimum 3 consecutive seconds</div></div></div>
+            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">1–2 TikTok Videos (15–60 sec)</div><div class="deliv-desc">Authentic product feature with hook, demo, and clear CTA</div></div></div>
+            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">FTC #Ad Disclosure</div><div class="deliv-desc">In caption AND verbally or on-screen within first 3 seconds</div></div></div>
+            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">TikTok Shop Affiliate Link</div><div class="deliv-desc">Direct link to ASIN B0BMXK62BD in bio or caption</div></div></div>
+            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">Product On-Screen</div><div class="deliv-desc">Full label clearly visible for minimum 3 consecutive seconds</div></div></div>
           </div>
           <div>
-            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">Draft Review (if clinical claims)</div><div class="deliv-desc">Send draft to Pattern before posting if using clinical stats</div></div></div>
-            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">FDA Disclaimer</div><div class="deliv-desc">Required in caption or on-screen for health claims</div></div></div>
-            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">Hashtags</div><div class="deliv-desc">#kaex #cortisolcocktail #TikTokShop + niche tags</div></div></div>
-            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">Performance Report</div><div class="deliv-desc">Views, clicks, sales data 7 days after posting</div></div></div>
+            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">Draft Review (clinical claims)</div><div class="deliv-desc">Send draft to Pattern before posting if using clinical stats</div></div></div>
+            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">FDA Disclaimer</div><div class="deliv-desc">Required in caption or on-screen for any health claims</div></div></div>
+            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">Required Hashtags</div><div class="deliv-desc">#kaex #cortisol #cortisolcocktail #TikTokShop + niche tags</div></div></div>
+            <div class="deliv-item"><div class="deliv-check">✓</div><div><div class="deliv-title">Performance Report</div><div class="deliv-desc">Views, clicks, conversions — shared 7 days after posting</div></div></div>
           </div>
         </div>
       </div>
@@ -804,8 +1087,8 @@ body{
             <div class="info-row"><div class="info-label">Duration</div><div class="info-value">15–60 sec (sweet spot: 20–35 sec)</div></div>
           </div>
           <div>
-            <div class="info-row"><div class="info-label">Captions</div><div class="info-value">On-screen captions recommended (+40% watch time)</div></div>
-            <div class="info-row"><div class="info-label">Safe Zone</div><div class="info-value">Keep key content in center 70% — avoid UI overlap</div></div>
+            <div class="info-row"><div class="info-label">Captions</div><div class="info-value">On-screen captions strongly recommended (+40% watch time)</div></div>
+            <div class="info-row"><div class="info-label">Safe Zone</div><div class="info-value">Keep key content in center 70% — avoid TikTok UI overlap</div></div>
             <div class="info-row"><div class="info-label">File Size</div><div class="info-value">Under 287MB per TikTok upload limits</div></div>
           </div>
         </div>
@@ -814,10 +1097,10 @@ body{
     <div class="contact-card">
       <div class="contact-avatar">👤</div>
       <div>
-        <div class="contact-name">Pattern Commerce Team — KA-EX</div>
+        <div class="contact-name">Pattern Commerce Team — KA-EX®</div>
         <div class="contact-role">TIKTOK SHOP AFFILIATE CAMPAIGN MANAGER</div>
         <a href="mailto:sumit.mane@pattern.com" class="contact-link">sumit.mane@pattern.com</a>
-        <a href="https://ka-ex.com" target="_blank" class="contact-link">ka-ex.com</a>
+        <a href="https://ka-ex.com" target="_blank" class="contact-link">ka-ex.com ↗</a>
       </div>
     </div>
   </div>
@@ -826,27 +1109,22 @@ body{
 <!-- FOOTER -->
 <footer class="brief-footer">
   <img class="footer-logo" src="https://ka-ex.com/cdn/shop/files/logo_white.png?v=1773743085" alt="KA-EX">
-  <div class="footer-copy">TikTok Shop Creator Brief 2025 · Confidential · Managed by Pattern Commerce</div>
+  <div class="footer-copy">TikTok Shop Creator Brief 2025 · Confidential · Managed by Pattern Commerce · It's Science, Baby!</div>
 </footer>
 
 <script>
 function show(id, clickedTab) {
-  // Hide all sections
   var sections = document.querySelectorAll('.section');
   for (var i = 0; i < sections.length; i++) {
     sections[i].classList.remove('active');
   }
-  // Deactivate all tabs
   var tabs = document.querySelectorAll('.nav-tab');
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].classList.remove('active');
   }
-  // Show target section
   var target = document.getElementById('sec-' + id);
   if (target) target.classList.add('active');
-  // Activate clicked tab
   if (clickedTab) clickedTab.classList.add('active');
-  // Scroll to top of content
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
